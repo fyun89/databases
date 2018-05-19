@@ -3,8 +3,8 @@ CREATE DATABASE chat;
 USE chat;
 
 CREATE TABLE Users (
-  Id int primary key,
-  User_Name varchar(100)
+  Id int auto_increment primary key,
+  User_Name varchar(100) unique
 );
 
 CREATE TABLE Rooms (
@@ -13,7 +13,7 @@ CREATE TABLE Rooms (
 );
 
 CREATE TABLE Messages (
-  Id int primary key, 
+  Id int auto_increment primary key,
   Message varchar(500), 
   User int,
   Room int,
